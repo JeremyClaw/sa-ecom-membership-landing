@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>South African Shopify Growth Group</title>
+  <meta name="description" content="Join a monthly e-commerce group for South Africans who want to build winning Shopify stores, find products faster, and create AI-powered ads and content." />
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg2: #0f1c33;
+      --card: rgba(255,255,255,0.07);
+      --line: rgba(255,255,255,0.12);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --green: #22c55e;
+      --green2: #86efac;
+      --gold: #f59e0b;
+      --blue: #38bdf8;
+      --shadow: 0 24px 70px rgba(0,0,0,.35);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,.14), transparent 25%),
+        radial-gradient(circle at bottom right, rgba(34,197,94,.18), transparent 30%),
+        linear-gradient(135deg, var(--bg), var(--bg2));
+    }
+    .wrap { max-width: 1160px; margin: 0 auto; padding: 28px 20px 70px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.12fr .88fr;
+      gap: 28px;
+      align-items: center;
+      min-height: calc(100vh - 80px);
+    }
+    .tag {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      color: #a7f3d0;
+      font-size: 14px;
+    }
+    h1 {
+      margin: 18px 0 14px;
+      font-size: clamp(42px, 6vw, 74px);
+      line-height: .95;
+      letter-spacing: -0.045em;
+      max-width: 11ch;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: clamp(18px, 2vw, 22px);
+      line-height: 1.6;
+      max-width: 40ch;
+    }
+    .proof {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 14px;
+      margin: 28px 0 0;
+      max-width: 760px;
+    }
+    .proof .item {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .proof strong { display:block; font-size: 24px; margin-bottom: 6px; }
+    .proof span { color: var(--muted); font-size: 14px; line-height: 1.4; }
+    .card {
+      background: var(--card);
+      backdrop-filter: blur(18px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+    .price {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin: 6px 0 18px;
+      flex-wrap: wrap;
+    }
+    .price .big {
+      font-size: 46px;
+      font-weight: 900;
+      color: white;
+    }
+    .price .small {
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+    .pill {
+      display: inline-block;
+      margin-bottom: 14px;
+      background: rgba(34,197,94,.12);
+      color: #bbf7d0;
+      border: 1px solid rgba(34,197,94,.28);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .checklist {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0 22px;
+    }
+    .check {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #e5e7eb;
+      line-height: 1.45;
+    }
+    .check i {
+      width: 22px;
+      height: 22px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--green), var(--green2));
+      color: #052e16;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-style: normal;
+      font-weight: 900;
+      margin-top: 2px;
+      flex: 0 0 auto;
+    }
+    .cta {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      color: #06281a;
+      background: linear-gradient(135deg, var(--green), var(--green2));
+      padding: 16px 20px;
+      border-radius: 18px;
+      font-size: 17px;
+      font-weight: 900;
+      margin-top: 6px;
+    }
+    .tiny {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #94a3b8;
+      line-height: 1.5;
+      text-align: center;
+    }
+    .section {
+      margin-top: 80px;
+    }
+    .section h2 {
+      font-size: clamp(30px, 4vw, 52px);
+      line-height: 1;
+      margin: 0 0 16px;
+      letter-spacing: -0.04em;
+    }
+    .section p.lead {
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 720px;
+      margin-bottom: 28px;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+    }
+    .feature, .faq {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      border-radius: 22px;
+      padding: 22px;
+    }
+    .feature h3, .faq h3 { margin: 0 0 10px; font-size: 22px; }
+    .feature p, .faq p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .banner {
+      margin-top: 70px;
+      padding: 28px;
+      border-radius: 26px;
+      border: 1px solid rgba(245,158,11,.24);
+      background: linear-gradient(135deg, rgba(245,158,11,.12), rgba(255,255,255,.04));
+    }
+    .banner strong { color: #fde68a; }
+    footer {
+      margin-top: 70px;
+      color: #94a3b8;
+      font-size: 13px;
+      text-align: center;
+    }
+    @media (max-width: 900px) {
+      .hero, .grid-3, .proof { grid-template-columns: 1fr; }
+      .hero { min-height: auto; padding-top: 28px; }
+      h1 { max-width: 12ch; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div>
+        <div class="tag">South African Shopify group · R1,000/month</div>
+        <h1>Build a winning Shopify store in South Africa.</h1>
+        <p class="sub">
+          Join a monthly e-commerce group where we teach you how to launch, grow and scale a Shopify store using the exact frameworks we’ve used across <strong>five South African stores doing over R100,000+ per month</strong>.
+        </p>
+
+        <div class="proof">
+          <div class="item">
+            <strong>5 stores</strong>
+            <span>Successful South African Shopify stores with proven lessons and systems.</span>
+          </div>
+          <div class="item">
+            <strong>R100k+/mo</strong>
+            <span>Real monthly revenue benchmarks from stores that have actually worked.</span>
+          </div>
+          <div class="item">
+            <strong>70–80%</strong>
+            <span>Winning-product hit rate using our testing and product research methods.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="pill">Limited monthly access</div>
+        <h2 style="margin:0 0 8px;font-size:34px;line-height:1;">South African Shopify Growth Group</h2>
+        <div class="price">
+          <div class="big">R1,000</div>
+          <div class="small">per month</div>
+        </div>
+        <div class="checklist">
+          <div class="check"><i>✓</i><span>Step-by-step video tutorials from store setup to launch.</span></div>
+          <div class="check"><i>✓</i><span>Learn how to create AI ad creatives at a fraction of the cost of traditional UGC or video production.</span></div>
+          <div class="check"><i>✓</i><span>Master product research, store building, offer creation, AI content, and Shopify setup for the South African market.</span></div>
+          <div class="check"><i>✓</i><span>Get proven methods for organic social growth or paid ad launches — depending on your path.</span></div>
+          <div class="check"><i>✓</i><span>Learn how to run ads, structure campaigns, and launch with confidence instead of guesswork.</span></div>
+        </div>
+        <a class="cta" href="mailto:deej@deejburke.co.za?subject=I%20want%20to%20join%20the%20Shopify%20group">Apply for access</a>
+        <div class="tiny">Start with a simple interest call-to-action now. You can later swap this to Stripe, a waitlist form, or a checkout page.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>What you’ll learn inside</h2>
+      <p class="lead">This is not theory from people who watched a few YouTube videos and declared themselves gurus. It’s practical training built around actual stores, actual campaigns, and actual results in South Africa.</p>
+      <div class="grid-3">
+        <div class="feature">
+          <h3>Store setup that actually converts</h3>
+          <p>Build your Shopify store properly from the beginning — theme setup, product pages, positioning, offers, visuals, and the details that stop your store looking like amateur hour.</p>
+        </div>
+        <div class="feature">
+          <h3>AI-powered creative production</h3>
+          <p>Learn how to use AI tools to create product imagery, site content, ad creatives, and high-performing creative concepts far faster and cheaper than traditional workflows.</p>
+        </div>
+        <div class="feature">
+          <h3>Paid ads + organic launch paths</h3>
+          <p>Launch with Meta ads if you want speed, or use proven organic content methods if you want to start without ad spend. We’ll show you both paths.</p>
+        </div>
+        <div class="feature">
+          <h3>Winning product research</h3>
+          <p>Use our structured research process to find products with strong odds of success, so you stop wasting money on random tests and dead-end ideas.</p>
+        </div>
+        <div class="feature">
+          <h3>Campaign setup that makes sense</h3>
+          <p>Understand how to structure campaigns, test creatives, read your numbers, and scale what works without burning budget like a fool.</p>
+        </div>
+        <div class="feature">
+          <h3>South Africa-specific context</h3>
+          <p>Everything is grounded in the South African market — not generic US advice that falls apart the moment you try applying it locally.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Who this is for</h2>
+      <div class="grid-3">
+        <div class="feature">
+          <h3>Beginners</h3>
+          <p>Perfect if you want to build your first e-commerce store the right way instead of learning through expensive mistakes.</p>
+        </div>
+        <div class="feature">
+          <h3>Operators</h3>
+          <p>Ideal for people already selling online who want better products, better creatives, and stronger systems for growth.</p>
+        </div>
+        <div class="feature">
+          <h3>Action-takers</h3>
+          <p>This is for people who want a practical path, not passive inspiration. If you want to execute, you’ll fit in.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>FAQ</h2>
+      <div class="grid-3">
+        <div class="faq">
+          <h3>Do I need experience?</h3>
+          <p>No. The group is designed to help complete beginners get moving while still giving more advanced operators valuable frameworks.</p>
+        </div>
+        <div class="faq">
+          <h3>Can I start without ads?</h3>
+          <p>Yes. You’ll learn how to launch through organic social methods, and also how to use paid ads properly when you’re ready.</p>
+        </div>
+        <div class="faq">
+          <h3>Is this South Africa specific?</h3>
+          <p>Yes. The examples, lessons, and advice are tailored to the local market rather than generic international fluff.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="banner">
+      <strong>Bottom line:</strong> if you want to build a serious Shopify store in South Africa — using modern AI tools, better product selection, stronger creatives, and proven launch systems — this group gives you the roadmap.
+    </div>
+
+    <footer>Built by Deej</footer>
+  </div>
+</body>
+</html>
